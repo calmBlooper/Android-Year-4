@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Levchuk Application</string>
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="author_name">Voldemar</string>
+    <string name="author_email">pifagor6541@gmail.com</string>
+    <string name="lyrics">Red and black I dress, eagle on my chest\nIt\'s good to be an Albanian\nKeep my head up high for that flag I die\nI\'m proud to be an Albanian</string>
+    <string name="title_activity_help">HelpActivity</string>
+    <string name="title_activity_background_task">BackgroundTaskActivity</string>
+    <string name="title_activity_loca_broadcast">LocaBroadcastActivity</string>
+</resources>
