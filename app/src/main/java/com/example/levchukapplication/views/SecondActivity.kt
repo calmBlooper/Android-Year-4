@@ -1,11 +1,8 @@
-package com.example.levchukapplication
+package com.example.levchukapplication.views
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -21,21 +18,20 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.levchukapplication.R
 import com.example.levchukapplication.style.greenFilter
 import com.example.levchukapplication.style.pinkText
 
-class SecondActivity : AppCompatActivity() {
+class SecondActivity : BaseActivity() {
     private var textFromMainActivity = ""
     private val text = mutableStateOf("")
     private val progress = mutableStateOf(0f)
     private var progressCountDownTimer: CountDownTimer? = null
+    override val windowName: String = "Second window"
     override fun onCreate(savedInstanceState: Bundle?) {
+         textFromMainActivity =
+        this.intent.getStringExtra(MainActivity.MAIN_ACTIVITY_EXTRA_TEXT).toString()
         super.onCreate(savedInstanceState)
-        textFromMainActivity =
-            this.intent.getStringExtra(MainActivity.MAIN_ACTIVITY_EXTRA_TEXT).toString()
-        setContent {
-            MainContent()
-        }
     }
 
     override fun onBackPressed() {
@@ -44,7 +40,7 @@ class SecondActivity : AppCompatActivity() {
 
     @Preview
     @Composable
-    fun MainContent() {
+   override fun MainContent() {
         Column(
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally,

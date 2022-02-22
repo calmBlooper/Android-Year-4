@@ -10,22 +10,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LevchukApplication">
         <activity
-            android:name=".LocalBroadcastActivity"
+            android:name=".views.BaseActivity"
+            android:exported="false"
+            android:label="@string/title_activity_base"
+            android:theme="@style/Theme.LevchukApplication.NoActionBar"/>
+
+        <receiver
+            android:name=".services.MessageBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".views.LocalBroadcastActivity"
             android:exported="false"
             android:label="@string/title_activity_loca_broadcast"
-            android:theme="@style/Theme.LevchukApplication" />
+            android:theme="@style/Theme.LevchukApplication.NoActionBar"/>
         <activity
-            android:name=".BackgroundTaskActivity"
+            android:name=".views.BackgroundTaskActivity"
             android:exported="false"
             android:label="@string/title_activity_background_task"
-            android:theme="@style/Theme.LevchukApplication" />
+            android:theme="@style/Theme.LevchukApplication.NoActionBar"/>
         <activity
-            android:name=".HelpActivity"
+            android:name=".views.HelpActivity"
             android:exported="false"
             android:label="@string/title_activity_help"
-            android:theme="@style/Theme.LevchukApplication" />
+            android:theme="@style/Theme.LevchukApplication.NoActionBar"/>
         <activity
-            android:name=".MainActivity"
+            android:name=".views.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.LevchukApplication.NoActionBar">
@@ -36,10 +47,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SecondActivity"
+            android:name=".views.SecondActivity"
             android:exported="false"
             android:label="@string/title_activity_second"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".views.MainActivity"
             android:theme="@style/Theme.LevchukApplication.NoActionBar" />
     </application>
 

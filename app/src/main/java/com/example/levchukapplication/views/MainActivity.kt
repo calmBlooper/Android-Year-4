@@ -1,10 +1,7 @@
-package com.example.levchukapplication
+package com.example.levchukapplication.views
 
 import android.content.Intent
-import android.os.Bundle
 import android.os.CountDownTimer
-import androidx.activity.compose.setContent
-import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
@@ -14,22 +11,17 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import com.example.levchukapplication.R
 import com.example.levchukapplication.style.orangeMain
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
     private val text = mutableStateOf("")
     private val textFromSecondActivity: MutableState<String?> = mutableStateOf(null)
     private val progress = mutableStateOf(0f)
     private var progressCountDownTimer: CountDownTimer? = null
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent {
-            Content()
-        }
-    }
+
+    override val windowName: String = "Main window"
 
     override fun onResume() {
         super.onResume()
@@ -37,52 +29,10 @@ class MainActivity : AppCompatActivity() {
         progress.value = 0f
     }
 
-    @Preview
-    @Composable
-    fun Content() {
-//        val scaffoldState = rememberScaffoldState()
-//        scaffoldState.drawerState.open()
-        Scaffold(
-            topBar = {
-                TopAppBar { /* Top app bar content */
-                    Row(
-                        modifier = Modifier.fillMaxSize(),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Text(text = "Main window", fontSize = 24.sp)
-                        Button(onClick = {}) {
-                            Text("Help")
-                        }
-                    }
-                }
-            },
-            drawerContent = {
-                Text("Main window", modifier = Modifier.padding(16.dp))
 
-                Divider()
-                Text("Help", modifier = Modifier.padding(16.dp))
-
-                Divider()
-                Text("Background task window", modifier = Modifier.padding(16.dp))
-
-                Divider()
-                Text("Local broadcast window", modifier = Modifier.padding(16.dp))
-
-                Divider()
-                // Drawer items
-            }//,
-         //   scaffoldState = ScaffoldState(DrawerState(DrawerValue.Open), SnackbarHostState())
-        ) {
-            // Screen content
-
-
-            MainContent()
-        }
-    }
 
     @Composable
-    fun MainContent() {
+    override fun MainContent() {
 
         Column(
             verticalArrangement = Arrangement.Center,
@@ -151,5 +101,5 @@ class MainActivity : AppCompatActivity() {
     companion object {
         const val MAIN_ACTIVITY_EXTRA_TEXT = "MAIN_ACTIVITY_EXTRA_TEXT"
         const val SECONT_ACTIVITY_INFO_REQUEST_CODE = 4285353
-    }
+   }
 }
