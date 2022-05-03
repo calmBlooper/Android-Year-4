@@ -6,6 +6,7 @@
     <string name="lyrics">Red and black I dress, eagle on my chest\nIt\'s good to be an Albanian\nKeep my head up high for that flag I die\nI\'m proud to be an Albanian</string>
     <string name="title_activity_help">HelpActivity</string>
     <string name="title_activity_background_task">BackgroundTaskActivity</string>
-    <string name="title_activity_loca_broadcast">LocaBroadcastActivity</string>
+    <string name="title_activity_local_broadcast">LocalBroadcastActivity</string>
     <string name="title_activity_base">BaseActivity</string>
+    <string name="title_activity_custom_preferences">CustomPreferencesActivity</string>
 </resources>

@@ -79,7 +79,6 @@ class SecondActivity : BaseActivity() {
                 modifier = Modifier.background(pinkText)
             )
         }
-        Text(text = "Made by: ${stringResource(id = R.string.author_name)}, ${stringResource(id = R.string.author_email)}")
 
     }
 

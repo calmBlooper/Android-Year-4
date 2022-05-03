@@ -4,15 +4,16 @@ import android.content.Intent
 import android.os.CountDownTimer
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
+import androidx.compose.material.Button
+import androidx.compose.material.LinearProgressIndicator
+import androidx.compose.material.Text
+import androidx.compose.material.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.example.levchukapplication.R
 import com.example.levchukapplication.style.orangeMain
 
 class MainActivity : BaseActivity() {
@@ -64,7 +65,6 @@ class MainActivity : BaseActivity() {
             }
 
         }
-        Text(text = "Made by: ${stringResource(id = R.string.author_name)}, ${stringResource(id = R.string.author_email)}")
     }
 
     private fun countDownToSecondActivityLaunch() {

@@ -9,10 +9,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.levchukapplication.R
 import com.example.levchukapplication.services.SimpleAsyncTask
 import com.example.levchukapplication.style.Purple200
 import com.example.levchukapplication.style.black
@@ -31,7 +29,7 @@ class BackgroundTaskActivity : BaseActivity() {
             modifier = Modifier
                 .fillMaxSize()
                 .background(Purple200)
-                .padding(top = 64.dp),
+                .padding(top = 8.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Top
         ) {

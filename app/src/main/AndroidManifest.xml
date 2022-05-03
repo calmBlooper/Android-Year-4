@@ -10,10 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LevchukApplication">
         <activity
+            android:name=".views.CustomPreferencesActivity"
+            android:exported="false"
+            android:label="@string/title_activity_custom_preferences"
+            android:theme="@style/Theme.LevchukApplication.NoActionBar" />
+        <activity
             android:name=".views.BaseActivity"
             android:exported="false"
             android:label="@string/title_activity_base"
-            android:theme="@style/Theme.LevchukApplication.NoActionBar"/>
+            android:theme="@style/Theme.LevchukApplication.NoActionBar" />
 
         <receiver
             android:name=".services.MessageBroadcastReceiver"
@@ -23,18 +28,18 @@
         <activity
             android:name=".views.LocalBroadcastActivity"
             android:exported="false"
-            android:label="@string/title_activity_loca_broadcast"
-            android:theme="@style/Theme.LevchukApplication.NoActionBar"/>
+            android:label="@string/title_activity_local_broadcast"
+            android:theme="@style/Theme.LevchukApplication.NoActionBar" />
         <activity
             android:name=".views.BackgroundTaskActivity"
             android:exported="false"
             android:label="@string/title_activity_background_task"
-            android:theme="@style/Theme.LevchukApplication.NoActionBar"/>
+            android:theme="@style/Theme.LevchukApplication.NoActionBar" />
         <activity
             android:name=".views.HelpActivity"
             android:exported="false"
             android:label="@string/title_activity_help"
-            android:theme="@style/Theme.LevchukApplication.NoActionBar"/>
+            android:theme="@style/Theme.LevchukApplication.NoActionBar" />
         <activity
             android:name=".views.MainActivity"
             android:exported="true"

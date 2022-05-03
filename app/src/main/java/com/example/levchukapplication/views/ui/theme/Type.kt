@@ -1,4 +1,4 @@
-package com.example.levchukapplication.ui.theme
+package com.example.levchukapplication.views.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
