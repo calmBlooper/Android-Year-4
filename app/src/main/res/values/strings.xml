@@ -9,4 +9,8 @@
     <string name="title_activity_local_broadcast">LocalBroadcastActivity</string>
     <string name="title_activity_base">BaseActivity</string>
     <string name="title_activity_custom_preferences">CustomPreferencesActivity</string>
+    <string name="title_activity_fragments">FragmentsActivity</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">This is an app widget description</string>
 </resources>

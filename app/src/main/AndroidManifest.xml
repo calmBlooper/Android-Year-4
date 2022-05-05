@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.levchukapplication">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,15 +12,35 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LevchukApplication">
+        <receiver
+            android:name=".LocationWidget"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/location_widget_info" />
+        </receiver>
+
+        <activity
+            android:name=".views.FragmentsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_fragments"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LevchukApplication.NoActionBar" />
         <activity
             android:name=".views.CustomPreferencesActivity"
             android:exported="false"
             android:label="@string/title_activity_custom_preferences"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.LevchukApplication.NoActionBar" />
         <activity
             android:name=".views.BaseActivity"
             android:exported="false"
             android:label="@string/title_activity_base"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.LevchukApplication.NoActionBar" />
 
         <receiver
@@ -29,21 +52,25 @@
             android:name=".views.LocalBroadcastActivity"
             android:exported="false"
             android:label="@string/title_activity_local_broadcast"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.LevchukApplication.NoActionBar" />
         <activity
             android:name=".views.BackgroundTaskActivity"
             android:exported="false"
             android:label="@string/title_activity_background_task"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.LevchukApplication.NoActionBar" />
         <activity
             android:name=".views.HelpActivity"
             android:exported="false"
             android:label="@string/title_activity_help"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.LevchukApplication.NoActionBar" />
         <activity
             android:name=".views.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.LevchukApplication.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -56,6 +83,7 @@
             android:exported="false"
             android:label="@string/title_activity_second"
             android:parentActivityName=".views.MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.LevchukApplication.NoActionBar" />
     </application>
 

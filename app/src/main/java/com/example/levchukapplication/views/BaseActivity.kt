@@ -35,6 +35,15 @@ abstract class BaseActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Because I try to avoid XML as much as possible, I have to change root view in some activities.
+     * This function allows to set root view of activity back to Compose Ui function.
+     */
+    fun reloadContent() {
+        setContent {
+            Content()
+        }
+    }
 
     @Preview
     @Composable
@@ -67,8 +76,8 @@ abstract class BaseActivity : AppCompatActivity() {
                         }
                         Text(
                             text = windowName,
-                            fontSize = 20.sp,
-                            overflow = TextOverflow.Ellipsis,
+                            fontSize = 16.sp,
+                            overflow = TextOverflow.Visible,
                             modifier = Modifier.weight(1f)
                         )
                         Button(onClick = { openHelpActivity() }) {
@@ -109,6 +118,13 @@ abstract class BaseActivity : AppCompatActivity() {
                 Text("Local custom preferences window", modifier = Modifier
                     .clickable {
                         openCustomPreferencesActivity()
+                    }
+                    .padding(16.dp))
+
+                Divider()
+                Text("Fragments demonstration window", modifier = Modifier
+                    .clickable {
+                        openFragmentsActivity()
                     }
                     .padding(16.dp))
 
@@ -170,6 +186,11 @@ abstract class BaseActivity : AppCompatActivity() {
 
     private fun openBackgroundTaskActivity() {
         val intent = Intent(this, BackgroundTaskActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun openFragmentsActivity() {
+        val intent = Intent(this, FragmentsActivity::class.java)
         startActivity(intent)
     }
 

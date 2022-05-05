@@ -5,7 +5,11 @@
       <map>
         <entry key="..\:/LevchukApplication/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.13802083333333334" />
         <entry key="..\:/LevchukApplication/app/src/main/res/drawable/ic_launcher_background.xml" value="0.13802083333333334" />
+        <entry key="..\:/LevchukApplication/app/src/main/res/layout/activity_main.xml" value="0.103125" />
+        <entry key="..\:/LevchukApplication/app/src/main/res/layout/appwidget_provider_layout.xml" value="0.11458333333333333" />
+        <entry key="..\:/LevchukApplication/app/src/main/res/layout/location_widget.xml" value="0.136" />
         <entry key="..\:/LevchukApplication/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.13802083333333334" />
+        <entry key="..\:/LevchukApplication/app/src/main/res/xml/example_appwidget_info.xml" value="0.11458333333333333" />
       </map>
     </option>
   </component>
